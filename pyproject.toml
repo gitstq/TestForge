@@ -1,0 +1,57 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "testforge"
+version = "1.0.0"
+description = "TestForge - Lightweight AI-Powered Test Case Intelligent Generation Engine CLI | 轻量级AI驱动测试用例智能生成引擎"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.8"
+authors = [
+    {name = "gitstq", email = "gitstq@users.noreply.github.com"}
+]
+keywords = [
+    "testing", "ai", "test-generation", "unit-test", "pytest", "unittest",
+    "code-analysis", "llm", "developer-tools", "cli", "automation"
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Testing",
+    "Topic :: Software Development :: Code Generators",
+    "Topic :: Utilities",
+]
+
+dependencies = []
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "pytest-cov>=4.0.0",
+]
+
+[project.scripts]
+testforge = "testforge.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/gitstq/TestForge"
+Repository = "https://github.com/gitstq/TestForge"
+Issues = "https://github.com/gitstq/TestForge/issues"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["testforge*"]
+
+[tool.setuptools.package-data]
+testforge = ["py.typed"]
